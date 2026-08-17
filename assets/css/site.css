@@ -936,38 +936,18 @@ code {
 }
 
 .privacy-page-hero {
-  padding-bottom: 46px;
+  padding-block: 88px 28px;
+}
+
+.privacy-page-hero h1 {
+  margin-bottom: 0;
+  font-size: clamp(3rem, 4vw, 3.5rem);
+  line-height: 1.08;
 }
 
 .policy-shell {
-  max-width: 900px;
-  padding-bottom: 120px;
-}
-
-.policy-meta {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 28px;
-}
-
-.policy-meta p {
-  display: grid;
-  gap: 5px;
-  margin: 0;
-  padding: 20px 22px;
-  border: 1px solid var(--line);
-  border-radius: 15px;
-  background: var(--surface);
-}
-
-.policy-meta span {
-  color: var(--muted);
-  font-size: .78rem;
-}
-
-.policy-meta strong {
-  font-size: .96rem;
+  max-width: 860px;
+  padding-bottom: 104px;
 }
 
 .policy-placeholder {
@@ -1000,13 +980,45 @@ code {
 }
 
 .policy-body-frame {
-  display: grid;
-  gap: 16px;
-  margin: 38px 0;
+  margin: 24px 0 30px;
   padding: 34px;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--surface);
+}
+
+.policy-effective-date {
+  margin: 32px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+.policy-effective-date strong {
+  color: var(--ink);
+}
+
+.policy-body-frame > .policy-intro {
+  margin-bottom: 34px;
+}
+
+.policy-body-frame > section + section {
+  margin-top: 38px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.policy-body-frame section h2 {
+  max-width: none;
+  margin-bottom: 16px;
+  font-size: clamp(1.75rem, 2.2vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -.02em;
+}
+
+.policy-body-frame section > :last-child {
+  margin-bottom: 0;
 }
 
 .policy-body-frame span {
@@ -1261,13 +1273,31 @@ code {
     text-align: left;
   }
 
-  .policy-meta {
-    grid-template-columns: 1fr;
+  .privacy-page-hero {
+    padding-block: 56px 24px;
+  }
+
+  .privacy-page-hero h1 {
+    font-size: clamp(2.25rem, 9vw, 2.625rem);
   }
 
   .policy-placeholder,
   .policy-body-frame {
     padding: 26px 22px;
+  }
+
+  .policy-body-frame > .policy-intro {
+    margin-bottom: 30px;
+  }
+
+  .policy-body-frame > section + section {
+    margin-top: 32px;
+    padding-top: 26px;
+  }
+
+  .policy-body-frame section h2 {
+    font-size: clamp(1.5rem, 6.5vw, 1.75rem);
+    line-height: 1.24;
   }
 }
 
