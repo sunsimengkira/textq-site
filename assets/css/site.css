@@ -311,20 +311,6 @@ h3 {
   font-size: .94rem;
 }
 
-.hero-proof {
-  display: inline-block;
-  margin: 24px 0 0;
-  color: #4b4f56;
-  font-size: .92rem;
-  font-weight: 680;
-}
-
-.hero-proof::before {
-  content: "✓";
-  margin-right: 8px;
-  color: var(--teal-dark);
-}
-
 .hero-trust {
   display: flex;
   flex-wrap: wrap;
