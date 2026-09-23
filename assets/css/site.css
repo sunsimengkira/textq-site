@@ -568,8 +568,8 @@ code {
 
 .privacy-section {
   display: grid;
-  grid-template-columns: 1fr minmax(270px, .55fr);
-  gap: 84px;
+  grid-template-columns: minmax(280px, .72fr) minmax(440px, 1.28fr);
+  gap: clamp(56px, 7vw, 84px);
   padding-block: 128px;
   align-items: center;
 }
@@ -622,13 +622,103 @@ code {
 }
 
 .privacy-visual {
-  width: min(100%, 330px);
+  width: min(100%, 610px);
+  margin: 0;
   justify-self: center;
 }
 
-.privacy-visual img {
-  width: 100%;
-  filter: drop-shadow(0 20px 30px rgba(25, 37, 52, .1));
+.privacy-art {
+  padding: clamp(24px, 3vw, 34px);
+  border: 1px solid #e1e4e8;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(145deg, #fff 0%, #f7fafb 100%);
+  box-shadow: var(--shadow);
+}
+
+.privacy-art-intro {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.privacy-mark {
+  position: relative;
+  display: block;
+  width: 88px;
+  height: 88px;
+  overflow: hidden;
+}
+
+.privacy-mark img {
+  position: absolute;
+  top: -14px;
+  left: -24px;
+  width: 136px;
+  max-width: none;
+  filter: drop-shadow(0 9px 13px rgba(25, 37, 52, .1));
+}
+
+.privacy-art-title,
+.privacy-art-subtitle,
+.privacy-panel-title,
+.privacy-panel-item p {
+  margin: 0;
+}
+
+.privacy-art-title {
+  color: var(--ink);
+  font-size: clamp(1.08rem, 1.7vw, 1.34rem);
+  font-weight: 780;
+  letter-spacing: -.025em;
+  line-height: 1.18;
+}
+
+.privacy-art-subtitle {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: .93rem;
+  line-height: 1.45;
+}
+
+.privacy-panel {
+  overflow: hidden;
+  border: 1px solid #e2e4e8;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, .94);
+  box-shadow: var(--shadow-soft);
+}
+
+.privacy-panel-title {
+  padding: 15px 22px;
+  border-bottom: 1px solid #e6e7ea;
+  color: var(--ink);
+  font-size: .94rem;
+  font-weight: 760;
+  text-align: center;
+}
+
+.privacy-panel-item {
+  padding: 19px 22px 21px;
+}
+
+.privacy-panel-item + .privacy-panel-item {
+  border-top: 1px solid #e6e7ea;
+}
+
+.privacy-panel-item h3 {
+  margin-bottom: 6px;
+  color: var(--ink);
+  font-size: 1.02rem;
+  letter-spacing: -.02em;
+  line-height: 1.25;
+}
+
+.privacy-panel-item p {
+  color: var(--muted);
+  font-size: .89rem;
+  line-height: 1.5;
 }
 
 .pricing-section {
@@ -1179,7 +1269,7 @@ code {
 
   .compact-shot,
   .privacy-visual {
-    width: min(78vw, 305px);
+    width: min(100%, 560px);
   }
 
   .sending-grid,
@@ -1201,6 +1291,10 @@ code {
 
   .privacy-visual {
     order: 2;
+  }
+
+  .privacy-art {
+    padding: 24px;
   }
 
   .pricing-layout {
@@ -1367,9 +1461,28 @@ code {
 
   .hero-visual,
   .compact-shot,
-  .privacy-visual,
   .send-shot {
     width: min(82vw, 300px);
+  }
+
+  .privacy-visual {
+    width: min(100%, 520px);
+  }
+
+  .privacy-art-intro {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .privacy-mark {
+    width: 72px;
+    height: 72px;
+  }
+
+  .privacy-mark img {
+    top: -12px;
+    left: -20px;
+    width: 112px;
   }
 
   .steps-list li {
