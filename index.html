@@ -47,8 +47,32 @@
           <li>No contact-list upload.</li>
         </ul>
       </div>
-      <figure class="hero-visual product-shot">
-        <img src="assets/images/textq-list-to-message.png" width="660" height="1040" alt="A TextQ contact list with Maya Chen, Noah Reed, and Alex Rivera becoming personalized message previews.">
+      <figure class="hero-visual transformation" aria-label="Two spreadsheet contacts become personalized messages ready for review">
+        <div class="transform-input">
+          <h3>Prepare contacts</h3>
+          <table aria-label="Example spreadsheet contacts">
+            <thead><tr><th scope="col">firstName</th><th scope="col">property</th></tr></thead>
+            <tbody>
+              <tr><td>Emma</td><td>145 Oak Street</td></tr>
+              <tr><td>Daniel</td><td>145 Oak Street</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="transform-template">
+          <h3>Write once <span aria-hidden="true">↓</span></h3>
+          <p>Hi <span class="sheet-field">{firstName}</span>, thanks for stopping by the open house at <span class="sheet-field">{property}</span>. Want the disclosures or a private tour?</p>
+        </div>
+        <div class="transform-results">
+          <h3>Ready to review <span>2 messages</span></h3>
+          <div class="message-preview">
+            <p class="preview-recipient">Emma <span>Not sent</span></p>
+            <p>Hi <strong>Emma</strong>, thanks for stopping by the open house at <strong>145 Oak Street</strong>. Want the disclosures or a private tour?</p>
+          </div>
+          <div class="message-preview">
+            <p class="preview-recipient">Daniel <span>Not sent</span></p>
+            <p>Hi <strong>Daniel</strong>, thanks for stopping by the open house at <strong>145 Oak Street</strong>. Want the disclosures or a private tour?</p>
+          </div>
+        </div>
       </figure>
     </section>
 
@@ -59,29 +83,74 @@
           <h2>The tedious part is texting everyone one by one.</h2>
         </div>
         <div class="pain-copy">
-          <p>Copy the number. Switch to Messages. Personalize the text. Send. Repeat. TextQ handles the repetitive setup so you can get through the list while the interaction is still fresh.</p>
+          <p>Copy the number. Switch to Messages. Personalize. Repeat. TextQ handles the repetitive setup while the interaction is still fresh.</p>
           <p class="example-line">Open-house visitors. Event attendees. Client follow-up. Community outreach.</p>
         </div>
       </div>
     </section>
 
-    <section class="positioning-section section-shell" aria-labelledby="positioning-title">
-      <p class="eyebrow">Built for the follow-through</p>
-      <div class="positioning-layout">
-        <h2 id="positioning-title">Your list. Your number. Your Messages.</h2>
-        <p>TextQ doesn’t upload or save your imported contact list. Personalize the list you already have, review the messages, and send from your own iPhone number. Replies stay in Messages.</p>
+    <section class="how-section section-shell" id="how-it-works" aria-labelledby="how-title">
+      <div class="section-heading">
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-title">From list to ready-to-send in three steps.</h2>
+      </div>
+      <div class="how-layout">
+        <ol class="steps-list">
+          <li>
+            <span class="step-index" aria-hidden="true">1</span>
+            <div>
+              <h3>Paste your list.</h3>
+              <p>Copy rows from your spreadsheet, or import a CSV or Excel file.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-index" aria-hidden="true">2</span>
+            <div>
+              <h3>Write once. Personalize each text.</h3>
+              <p>Use any imported column—like first name, address, or date. Add one image, such as a business card, map, or flyer.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-index" aria-hidden="true">3</span>
+            <div>
+              <h3>Review and choose how to send.</h3>
+              <p>Check recipients and personalized messages. Remove anyone you don’t want to include, then choose how to send.</p>
+            </div>
+          </li>
+        </ol>
+        <figure class="review-visual product-shot compact-shot">
+          <img src="assets/images/textq-review.png" width="660" height="1434" alt="TextQ Review and Send showing three recipients and the Send One by One and Fast Send choices.">
+        </figure>
+      </div>
+    </section>
+
+    <section class="sending-section">
+      <div class="section-shell">
+        <div class="section-heading centered-heading">
+          <p class="eyebrow">Sending</p>
+          <h2>Review your messages. Choose how to send.</h2>
+        </div>
+        <div class="sending-grid">
+          <article class="send-choice primary-choice">
+            <div class="choice-copy">
+              <h3>Send One by One</h3>
+              <p>TextQ opens Apple Messages with the recipient and personalized message already filled in. Review it, then tap Send.</p>
+            </div>
+          </article>
+          <article class="send-choice">
+            <div class="choice-copy">
+              <h3>Fast Send</h3>
+              <p>Review the batch in TextQ, then explicitly choose <span class="control-name">Open Shortcuts &amp; Start Sending</span> for the remaining messages. Requires the TextQ Fast Send Shortcut and sends through Apple Messages.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="privacy-section section-shell" aria-labelledby="privacy-title">
       <div class="privacy-copy">
         <p class="eyebrow">Privacy</p>
-        <h2 id="privacy-title">Your list stays private.</h2>
-        <ul class="trust-list">
-          <li>No Contacts access.</li>
-          <li>No account.</li>
-          <li>TextQ doesn’t upload or save your contact list.</li>
-        </ul>
+        <h2 id="privacy-title">Your list. Your number. Your Messages.</h2>
       </div>
       <figure class="privacy-visual" aria-label="TextQ privacy and Messages details">
         <div class="privacy-art">
@@ -107,73 +176,6 @@
           </div>
         </div>
       </figure>
-    </section>
-
-    <section class="how-section section-shell" id="how-it-works" aria-labelledby="how-title">
-      <div class="section-heading">
-        <p class="eyebrow">How it works</p>
-        <h2 id="how-title">From list to ready-to-send in three steps.</h2>
-      </div>
-      <div class="how-layout">
-        <ol class="steps-list">
-          <li>
-            <span class="step-index" aria-hidden="true">1</span>
-            <div>
-              <h3>Paste your list.</h3>
-              <p>Copy rows from your spreadsheet, or import a CSV or Excel file.</p>
-            </div>
-          </li>
-          <li>
-            <span class="step-index" aria-hidden="true">2</span>
-            <div>
-              <h3>Write once. Personalize each text.</h3>
-              <p>Use fields such as first name, address, date, or any other column you imported. Add one image too—like a business card, map, or event flyer.</p>
-            </div>
-          </li>
-          <li>
-            <span class="step-index" aria-hidden="true">3</span>
-            <div>
-              <h3>Review and choose how to send.</h3>
-              <p>Check the recipients and personalized messages, remove anyone you do not want to include, then choose One-by-One or Fast Send.</p>
-            </div>
-          </li>
-        </ol>
-        <figure class="review-visual product-shot compact-shot">
-          <img src="assets/images/textq-review.png" width="660" height="1434" alt="TextQ Review and Send showing three recipients and the Send One by One and Fast Send choices.">
-        </figure>
-      </div>
-    </section>
-
-    <section class="sending-section">
-      <div class="section-shell">
-        <div class="section-heading centered-heading">
-          <p class="eyebrow">Sending</p>
-          <h2>Send from your own number.</h2>
-          <p>Messages are sent through Apple Messages, so replies stay where you already text.</p>
-        </div>
-        <div class="sending-grid">
-          <article class="send-choice primary-choice">
-            <div class="choice-copy">
-              <span class="choice-label">One-by-One</span>
-              <h3>Send One by One</h3>
-              <p>TextQ opens Apple Messages with the recipient and personalized message already filled in. Review it, then tap Send.</p>
-            </div>
-            <figure class="product-shot send-shot">
-              <img src="assets/images/textq-apple-messages.png?v=c2-final" width="660" height="1120" alt="An unsent personalized text to Maya shown in Apple Messages.">
-            </figure>
-          </article>
-          <article class="send-choice">
-            <div class="choice-copy">
-              <span class="choice-label">Fast Send</span>
-              <h3>Review a few. Fast-send the rest.</h3>
-              <p>After reviewing the batch, you can explicitly start Fast Send for the remaining messages.</p>
-            </div>
-            <figure class="product-shot send-shot">
-              <img src="assets/images/textq-fast-send.png?v=c2-final" width="660" height="990" alt="TextQ Fast Send confirmation showing three personalized previews and the explicit Open Shortcuts and Start Sending action.">
-            </figure>
-          </article>
-        </div>
-      </div>
     </section>
 
     <section class="pricing-section">
