@@ -649,7 +649,7 @@ code {
   display: block;
   width: 64px;
   height: 64px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .privacy-mark img {
